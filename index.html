@@ -1,441 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokengama Global Partners (LGP)</title>
-    <!-- Chargement de la bibliothèque officielle pour toutes les icônes de réseaux sociaux -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>LOKENGAMA GLOBAL PARTNERS (LGP)</title>
+    <meta property="og:title" content="LOKENGAMA GLOBAL PARTNERS">
+    <meta property="og:description" content="Sourcing, logistique, transit et dédouanement Chine-Bunia.">
     <style>
-        :root {
-            --primarycolor: #0a2e50;
-            --accentcolor: #daa520;
-            --textcolor: #1a1a1a;
-            --backgroundlight: #f4f6f9;
-            --whatsappcolor: #00875a;
-            --emailcolor: #d93025;
-        }
-
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--textcolor);
-            background-color: #ffffff;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primarycolor);
-            color: #ffffff;
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brandbox {
-            font-size: 1.2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-
-        .herosection {
-            background-color: var(--primarycolor);
-            color: #ffffff;
-            padding: 80px 5%;
-            text-align: center;
-            border-bottom: 5px solid var(--accentcolor);
-        }
-
-        .herosection h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .herosection p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contentcontainer {
-            padding: 60px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .sectiontitle {
-            color: var(--primarycolor);
-            font-size: 1.8rem;
-            border-bottom: 2px solid var(--accentcolor);
-            padding-bottom: 10px;
-            margin-top: 40px;
-            margin-bottom: 30px;
-        }
-
-        .expertisegrid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
-
-        .expertisecard {
-            background-color: var(--backgroundlight);
-            border-radius: 6px;
-            overflow: hidden;
-            border-top: 4px solid var(--primarycolor);
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .cardimage {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            background-color: #ddd;
-        }
-
-        .cardiconbox {
-            padding: 20px 20px 0 20px;
-            font-size: 2rem;
-            color: var(--primarycolor);
-        }
-
-        .cardcontent {
-            padding: 20px;
-            flex-grow: 1;
-        }
-
-        .cardcontent h3 {
-            margin-top: 0;
-            color: var(--primarycolor);
-            font-size: 1.2rem;
-        }
-
-        .commitmentbox {
-            background-color: var(--backgroundlight);
-            padding: 30px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-
-        .stepsgrid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .stepcard {
-            background-color: #ffffff;
-            padding: 20px;
-            border: 1px solid #eee;
-            text-align: center;
-        }
-
-        .stepnumber {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--accentcolor);
-            margin-bottom: 10px;
-        }
-
-        .contactgrid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .whatsapplink {
-            display: block;
-            background-color: var(--whatsappcolor);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px;
-            text-align: center;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Formulaire d'envoi d'email */
-        .mailformbox {
-            background-color: var(--backgroundlight);
-            padding: 25px;
-            border-radius: 6px;
-            border: 1px solid #e0e0e0;
-            margin-top: 20px;
-        }
-
-        .inputfield {
-            width: 100%;
-            padding: 12px;
-            margin-top: 8px;
-            margin-bottom: 18px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 1rem;
-        }
-
-        .commentarea {
-            width: 100%;
-            padding: 12px;
-            margin-top: 8px;
-            margin-bottom: 18px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-family: sans-serif;
-            font-size: 1rem;
-            resize: vertical;
-        }
-
-        .emailbtn {
-            background-color: var(--primarycolor);
-            color: white;
-            border: none;
-            padding: 14px 20px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.3s;
-        }
-
-        .emailbtn:hover {
-            background-color: #051d34;
-        }
-
-        /* Zone des icônes de réseaux sociaux */
-        .socialbox {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .socialicon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-
-        .socialicon:hover {
-            transform: scale(1.1);
-            opacity: 0.9;
-        }
-
-        .facebook { background-color: #1877f2; }
-        .twitter { background-color: #1da1f2; }
-        .instagram { background-color: #e1306c; }
-        .tiktok { background-color: #000000; }
-        .youtube { background-color: #ff0000; }
-        .linkedin { background-color: #0077b5; }
-
-        .legalbox {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border: 1px dashed var(--primarycolor);
-        }
-
-        footer {
-            background-color: #111111;
-            color: #ffffff;
-            text-align: center;
-            padding: 30px 5%;
-            margin-top: 60px;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; gap: 15px; }
-            nav a { margin: 0 10px; }
-        }
+        :root { --primarycolor: #0a2e50; --accentcolor: #daa520; --textcolor: #1a1a1a; --backgroundlight: #f4f6f9; --whatsappcolor: #00875a; }
+        body { font-family: sans-serif; margin: 0; padding: 0; color: var(--textcolor); background-color: #ffffff; line-height: 1.6; }
+        header { background-color: var(--primarycolor); color: #ffffff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #ffffff; text-decoration: none; margin-left: 20px; font-weight: bold; }
+        .hero { background: linear-gradient(rgba(10, 46, 80, 0.85), rgba(10, 46, 80, 0.85)), url('https://unsplash.com'); background-size: cover; background-position: center; height: 40vh; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .container { padding: 40px 10%; }
+        h2 { text-align: center; color: var(--primarycolor); margin-bottom: 30px; }
+        .expertisegrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .expertisecard { background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--primarycolor); padding: 20px; text-align: center; }
+        .expertisecard h3 { color: var(--accentcolor); margin-top: 0; }
+        .contact-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .contact-form-box, .contact-info-box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); box-sizing: border-box; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        .btn-send { background: var(--whatsappcolor); color: white; padding: 15px; border: none; border-radius: 6px; width: 100%; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
+        .social-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .social-link { background: #eef2f7; padding: 10px; border-radius: 6px; text-align: center; font-weight: bold; color: var(--primarycolor); text-decoration: none; display: block; }
+        .social-link:hover { background: var(--accentcolor); color: white; }
+        .wa-list-link { color: var(--primarycolor); text-decoration: none; font-weight: bold; }
+        .wa-list-link:hover { text-decoration: underline; }
+        footer { background: #111111; color: white; text-align: center; padding: 20px; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="brandbox">LOKENGAMA GLOBAL PARTNERS</div>
-        <nav>
-            <a href="#vision">Vision</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#commitment">Engagement</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <div class="logo-box"><span style="font-weight: bold; font-size: 1.2rem;">LOKENGAMA GLOBAL PARTNERS</span></div>
+    <nav><a href="#expertise">Expertise</a><a href="#contact">Contact</a></nav>
+</header>
 
-    <section class="herosection">
-        <h1>Lokengama Global Partners (LGP)</h1>
-        <p>Société de solutions multisectorielles et d'investissement global en Afrique Centrale.</p>
-    </section>
+<section class="hero">
+    <h1>Lokengama Global Partners (LGP)</h1>
+    <p>Solutions multisectorielles et investissement global en Afrique Centrale.</p>
+</section>
 
-    <div class="contentcontainer">
-        
-        <!-- 1. Vision et Mission -->
-        <h2 class="sectiontitle" id="vision">1. Vision et Mission</h2>
-        <p><strong>Lokengama Global Partners (LGP)</strong> est une société de solutions multisectorielles et d’investissement global. Notre mission est de catalyser le développement industriel, urbain et commercial en Afrique Centrale en facilitant l’accès aux technologies de pointe, aux infrastructures de qualité et aux ressources essentielles provenant d'Asie, d'Europe et du Moyen-Orient.</p>
-
-        <!-- 2. Nos Domaines d'Expertise -->
-        <h2 class="sectiontitle" id="expertise">2. Nos Domaines d’Expertise</h2>
-        <div class="expertisegrid">
-            
-            <div class="expertisecard">
-                <img src="solar.png" alt="Énergie Solaire LGP" class="cardimage">
-                <div class="cardcontent">
-                    <h3>Énergie solaire & Hydrocarbures</h3>
-                    <p>Importation et distribution de produits pétroliers et solutions énergétiques propres adaptées à vos besoins.</p>
-                </div>
-            </div>
-
-            <div class="expertisecard">
-                <img src="mines.png" alt="Engins de chantier et mines LGP" class="cardimage">
-                <div class="cardcontent">
-                    <h3>Vente d’Engins de Chantier & Mines</h3>
-                    <p>Fourniture de matériel lourd (de toutes marques) pour les infrastructures, vente de l'or et l’extraction minière.</p>
-                </div>
-            </div>
-
-            <div class="expertisecard">
-                <img src="water.png" alt="Traitement de l'eau LGP" class="cardimage">
-                <div class="cardcontent">
-                    <h3>Traitement de l’Eau & Agro-industrie</h3>
-                    <p>Systèmes de purification (unités CETIL) et lignes de mise en sachet automatique pour une production autonome.</p>
-                </div>
-            </div>
-
-            <div class="expertisecard">
-                <img src="logistics.png" alt="Logistique Import Export LGP" class="cardimage">
-                <div class="cardcontent">
-                    <h3>Logistique & Import/Export</h3>
-<div class="expertisecard">
-            <div class="cardcontent" style="padding-top: 40px;">
-                <h3>Construction & Immobilier</h3>
-                <p>Développement de projets de construction civile et sécurisation juridique totale d'achats/ventes de terrains.</p>
-            </div>
-        </div>
-
-        <div class="expertisecard">
-            <div class="cardcontent" style="padding-top: 40px;">
-                <h3>Vente de Véhicules</h3>
-                <p>Importation directe de véhicules neufs et d'occasion certifiés depuis le Japon, la Chine, l'Europe et Dubaï.</p>
-            </div>
-        </div>
-
-        <div class="expertisecard">
-            <div class="cardcontent" style="padding-top: 40px;">
-                <h3>Sécurité Électronique</h3>
-                <p>Fourniture, configuration et installation professionnelle de systèmes de caméras de surveillance et de protection.</p>
-            </div>
-        </div>
-
-        <div class="expertisecard">
-            <div class="cardcontent" style="padding-top: 40px;">
-                <h3>Services d'Appui</h3>
-                <p>Assistance légale et juridique rigoureuse pour blinder vos contrats et sous-traitances d'affaires.</p>
-            </div>
-        </div>
-
+<div class="container" id="expertise">
+    <h2>Nos Domaines d'Expertise</h2>
+    <div class="expertisegrid">
+        <div class="expertisecard"><h3>Énergie Solaire & Hydrocarbures</h3><p>Importation et distribution de solutions énergétiques globales.</p></div>
+        <div class="expertisecard"><h3>Vente d'Engins de Chantier & Mines</h3><p>Fourniture de matériel lourd toutes marques et exploitation minière.</p></div>
+        <div class="expertisecard"><h3>Traitement de l'Eau & Agro-industrie</h3><p>Systèmes complets de purification d'eau (unités CETIL).</p></div>
+        <div class="expertisecard"><h3>Logistique & Import/Export</h3><p>Réseau logistique robuste couvrant la RDC et l'Afrique de l'Est.</p></div>
+        <div class="expertisecard"><h3>Construction & Immobilier</h3><p>Développement de projets de construction civile et sécurisation de terrains.</p></div>
+        <div class="expertisecard"><h3>Vente de Véhicules</h3><p>Importation directe de véhicules depuis le Japon, la Chine, l'Europe et Dubaï.</p></div>
     </div>
 </div>
 
-<div class="container" style="background-color: #f4f6f9;" id="engagement">
-    <h2>Notre Engagement : Le Partenariat par Preuve</h2>
-    <div style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 800px; margin: 0 auto; border-left: 5px solid #daa520;">
-        <p>Pour garantir une transparence totale et prouver notre solidité financière, nous utilisons un modèle de paiement sécurisé unique :</p>
-        <ul>
-            <li><strong>Zéro avance demandée :</strong> Nous investissons nos propres capitaux pour lancer votre commande.</li>
-            <li><strong>50% de remboursement :</strong> Uniquement après délivrance de la preuve d'achat ou du connaissement (Bill of Lading).</li>
-            <li><strong>50% de solde restant :</strong> À régler juste avant la livraison finale de votre marchandise.</li>
-        </ul>
-    </div>
-</div>
-
-<div class="container" id="contact">
+<div class="container" id="contact" style="background-color: var(--backgroundlight);">
     <h2>Canaux Officiels & Contact</h2>
     <div class="contact-layout">
         
+        <!-- Formulaire avec bouton WhatsApp actif -->
         <div class="contact-form-box">
-            <h3 style="margin-top:0; color:#0a2e50;">Formulaire de Demande</h3>
+            <h3>Formulaire de Demande</h3>
             <form id="waForm">
                 <div class="form-group">
-                    <label>Votre Nom / Entreprise</label>
+                    <label>Votre Nom</label>
                     <input type="text" id="nom" required placeholder="Ex: Boutique Espoir Bunia">
                 </div>
                 <div class="form-group">
-                    <label>Marchandise ou Projet concerné</label>
-                    <input type="text" id="produit" required placeholder="Ex: Kits Solaires, Engins, Caméras...">
+                    <label>Marchandise concernée</label>
+                    <input type="text" id="produit" required placeholder="Ex: Kits Solaires, Engins...">
                 </div>
                 <div class="form-group">
-                    <label>Mode de transport de préférence</label>
+                    <label>Mode de transport</label>
                     <select id="mode">
-                        <option value="Maritime">Maritime (Gros volumes, économique)</option>
-                        <option value="Aerien">Aérien (Volumes urgents, rapide)</option>
+                        <option value="Maritime">Maritime</option>
+                        <option value="Aerien">Aérien</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Précisions complémentaires</label>
-                    <textarea id="details" rows="4" placeholder="Spécifiez la quantité, le poids, ou vos questions légales..."></textarea>
+                    <label>Précisions</label>
+                    <textarea id="details" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn-send">Envoyer via WhatsApp</button>
             </form>
-            <div class="note-alert">
-                <strong>Attention :</strong> Pour préserver la réactivité, nous répondons uniquement via nos numéros WhatsApp officiels. Aucune demande en commentaire ne sera traitée.
-            </div>
         </div>
 
+        <!-- Coordonnées avec VOS 4 NUMÉROS et vos LIENS REELS -->
         <div class="contact-info-box">
-            <h3>📞 WhatsApp Officiels</h3>
-            <ul>
-                <li><strong>WhatsApp Entreprise :</strong> <a href="https://wa.me">+243 813 254 158</a></li>
-                <li><strong>Expert Conseil :</strong> <a href="https://wa.me">+256 756 164 073</a></li>
-                <li><strong>Facilitateur :</strong> <a href="https://wa.me">+242 053 542 862</a></li>
+            <h3>📞 Lignes WhatsApp Officielles</h3>
+            <p>Cliquez sur un numéro pour ouvrir directement WhatsApp :</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 8px;">💚 <strong>Ligne 1 :</strong> <a href="https://wa.me" target="_blank" class="wa-list-link">+243 813 254 158</a></li>
+                <li style="margin-bottom: 8px;">💚 <strong>Ligne 2 :</strong> <a href="https://wa.me" target="_blank" class="wa-list-link">+256 756 164 073</a></li>
+                <li style="margin-bottom: 8px;">💚 <strong>Ligne 3 :</strong> <a href="https://wa.me" target="_blank" class="wa-list-link">+242 05 354 2862</a></li>
+                <li style="margin-bottom: 8px;">💚 <strong>Ligne 4 :</strong> <a href="https://wa.me" target="_blank" class="wa-list-link">+243 992 058 826</a></li>
             </ul>
 
             <h3>✉️ Courriel Électronique</h3>
-            <p><a href="mailto:lokengamaglobalpartners@gmail.com">lokengamaglobalpartners@gmail.com</a></p>
+            <p><a href="mailto:lokengamaglobalpartners@gmail.com" style="color: var(--primarycolor); font-weight: bold;">lokengamaglobalpartners@gmail.com</a></p>
 
-            <h3>🌐 Réseaux Sociaux</h3>
+            <h3>🌐 Nos Réseaux Sociaux (Cliquez pour visiter)</h3>
             <div class="social-grid">
-                <div class="social-badge">Facebook</div>
-                <div class="social-badge">Instagram</div>
-                <div class="social-badge">TikTok</div>
-                <div class="social-badge">LinkedIn</div>
-                <div class="social-badge">X (Twitter)</div>
-                <div class="social-badge">YouTube</div>
+                <a href="https://facebook.com" target="_blank" class="social-link">Facebook</a>
+                <a href="https://instagram.com" target="_blank" class="social-link">Instagram</a>
+                <a href="https://tiktok.com" target="_blank" class="social-link">TikTok</a>
+                <a href="https://linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://x.com" target="_blank" class="social-link">X (Twitter)</a>
+                <a href="https://youtube.com" target="_blank" class="social-link">YouTube</a>
             </div>
 
-            <h3>🏢 Siège & Agences de Liaison</h3>
-            <ul style="font-size: 0.95rem; list-style: none; padding-left: 0;">
-                <li><strong>Siège Social (Bunia) :</strong> 062-Mbadanka-Bankoko-Mbunya-Bunia-RDC</li>
-                <li><strong>Liaison Kinshasa :</strong> Av. Ilingi n°06, Q. Leza Kingabwa, C. Limete (Indus.)</li>
-                <li><strong>Liaison Kisangani :</strong> Av. Bini n°01, Q. Fina, C. Makiso</li>
-            </ul>
-
-            <h3>📄 Registres Officiels</h3>
+            <h3>🏢 Siège Officiel</h3>
+            <p><strong>Adresse :</strong> Ville de Bunia, Commune Mbunya, Province de l'Ituri, RD Congo.</p>
             <p style="font-size: 0.85rem; color:#666;">
-                <strong>RCCM :</strong> CD/RCCM/24-A-13201010401<br>
-                <strong>N° Impôt :</strong> A2433556B<br>
-                <strong>IDN :</strong> 07-G-4701-N63755J
+                <strong>RCCM :</strong> CD/RCCM/24-A-13201010401 | <strong>Impôt :</strong> A2433556B
             </p>
         </div>
 
@@ -443,14 +121,8 @@
 </div>
 
 <footer>
-    <p><strong>LOKENGAMA GLOBAL PARTNERS (LGP)</strong></p>
-    <p>Bunia, Province de l'Ituri, République Démocratique du Congo</p>
-    <p>&copy; 2026 - Tous droits réservés</p>
+    <p>&copy; 2026 - LOKENGAMA GLOBAL PARTNERS - Tous droits réservés</p>
 </footer>
-
-<a href="https://wa.me?text=Bonjour%20LOKENGAMA,%20je%20souhaite%20obtenir des informations." class="wa-float" target="_blank" rel="noopener">
-    <svg viewBox="0 0 448 512" style="width: 32px; height: 32px; fill: white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-</a>
 
 <script>
 document.getElementById('waForm').addEventListener('submit', function(e) {
@@ -459,10 +131,10 @@ document.getElementById('waForm').addEventListener('submit', function(e) {
     const produit = document.getElementById('produit').value;
     const mode = document.getElementById('mode').value;
     const details = document.getElementById('details').value;
-    const num = "243813254158";
-    const textMessage = `*NOUVELLE DEMANDE SITE WEB LGP*\n\n*Client:* ${nom}\n*Projet/Marchandise:* ${produit}\n*Transport:* ${mode}\n*Précisions:* ${details}`;
-    window.open(`https://wa.me{num}?text=${encodeURIComponent(textMessage)}`, '_blank');
+    const txt = `*NOUVELLE DEMANDE WEB LGP*\n\n*Client:* ${nom}\n*Produit:* ${produit}\n*Transport:* ${mode}\n*Précisions:* ${details}`;
+    window.open(`https://wa.me?text=${encodeURIComponent(txt)}`, '_blank');
 });
 </script>
+
 </body>
 </html>
