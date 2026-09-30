@@ -1,331 +1,329 @@
-<!DOCTYPE html>
-<html lang="fr" id="html-root">
+            <!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Lokengama Global Partners - Solutions Globales d'Investissement et Multisectorielles</title>
+    <title>Lokengama Global Partners (LGP)</title>
+    <!-- Chargement de la bibliothèque officielle pour toutes les icônes de réseaux sociaux -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
-            --primary-color: #0A2E50; /* Bleu marine LGP */
-            --accent-color: #DAA520;  /* Or LGP */
-            --text-color: #333333;
-            --bg-light: #f9f9f9;
-            --white: #ffffff;
-            --whatsapp-green: #25d366;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --primarycolor: #0a2e50;
+            --accentcolor: #daa520;
+            --textcolor: #1a1a1a;
+            --backgroundlight: #f4f6f9;
+            --whatsappcolor: #00875a;
+            --emailcolor: #d93025;
         }
 
         body {
-            color: var(--text-color);
-            background-color: var(--bg-light);
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--textcolor);
+            background-color: #ffffff;
             line-height: 1.6;
         }
 
-        /* --- NAVIGATION LGP --- */
-        .lgp-navbar {
-            background-color: var(--primary-color);
-            padding: 15px 20px;
+        header {
+            background-color: var(--primarycolor);
+            color: #ffffff;
+            padding: 20px 5%;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            align-items: center;
         }
 
-        .lgp-logo-area {
+        .brandbox {
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .herosection {
+            background-color: var(--primarycolor);
+            color: #ffffff;
+            padding: 80px 5%;
+            text-align: center;
+            border-bottom: 5px solid var(--accentcolor);
+        }
+
+        .herosection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .herosection p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contentcontainer {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sectiontitle {
+            color: var(--primarycolor);
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accentcolor);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .expertisegrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .expertisecard {
+            background-color: var(--backgroundlight);
+            border-radius: 6px;
+            overflow: hidden;
+            border-top: 4px solid var(--primarycolor);
             display: flex;
             flex-direction: column;
-            color: var(--white);
-            max-width: 140px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
-        .lgp-logo-main {
-            font-size: 1.6rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-            line-height: 1;
+        .cardimage {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #ddd;
         }
 
-        .lgp-logo-sub {
-            font-size: 0.65rem;
-            font-weight: 600;
-            opacity: 0.8;
-            line-height: 1.2;
-            margin-top: 4px;
+        .cardiconbox {
+            padding: 20px 20px 0 20px;
+            font-size: 2rem;
+            color: var(--primarycolor);
         }
 
-        .lgp-nav-links {
+        .cardcontent {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .cardcontent h3 {
+            margin-top: 0;
+            color: var(--primarycolor);
+            font-size: 1.2rem;
+        }
+
+        .commitmentbox {
+            background-color: var(--backgroundlight);
+            padding: 30px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .stepsgrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stepcard {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .stepnumber {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accentcolor);
+            margin-bottom: 10px;
+        }
+
+        .contactgrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .whatsapplink {
+            display: block;
+            background-color: var(--whatsappcolor);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Formulaire d'envoi d'email */
+        .mailformbox {
+            background-color: var(--backgroundlight);
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        .inputfield {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .commentarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 1rem;
+            resize: vertical;
+        }
+
+        .emailbtn {
+            background-color: var(--primarycolor);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .emailbtn:hover {
+            background-color: #051d34;
+        }
+
+        /* Zone des icônes de réseaux sociaux */
+        .socialbox {
             display: flex;
             gap: 15px;
-            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
         }
 
-        .lgp-nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        .lgp-nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* --- HERO BANNER --- */
-        .lgp-hero {
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 80px 20px 60px 20px;
+        .socialicon {
             display: flex;
-            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            align-items: center;
-            min-height: 65vh;
-        }
-
-        .lgp-hero h1 {
-            font-size: 2.6rem;
-            font-weight: 800;
-            line-height: 1.3;
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
-
-        .lgp-hero p {
-            font-size: 1.1rem;
-            font-weight: 400;
-            opacity: 0.9;
-            max-width: 500px;
-            line-height: 1.5;
-        }
-
-        /* --- CONTENU --- */
-        .container {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            color: var(--primary-color);
-            font-size: 2rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent-color);
-            margin: 0.5rem auto 0;
-            border-radius: 2px;
-        }
-
-        /* --- GRILLE SERVICES --- */
-        .grid-services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            padding: 25px;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .service-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
             font-size: 1.3rem;
+            transition: transform 0.2s, opacity 0.2s;
         }
 
-        /* --- SECTION GALERIE --- */
-        .grid-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
+        .socialicon:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
         }
 
-        .gallery-item {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
+        .facebook { background-color: #1877f2; }
+        .twitter { background-color: #1da1f2; }
+        .instagram { background-color: #e1306c; }
+        .tiktok { background-color: #000000; }
+        .youtube { background-color: #ff0000; }
+        .linkedin { background-color: #0077b5; }
 
-        .gallery-item img, .gallery-item video {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.03);
-        }
-
-        .gallery-desc {
-            padding: 15px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
-
-        /* --- SECTION ADRESSES --- */
-        .grid-offices {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .office-card {
-            background: var(--white);
-            border-left: 5px solid var(--accent-color);
-            border-radius: 4px;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .office-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .office-address {
-            font-style: normal;
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-align: center;
+        .legalbox {
+            background-color: #f9f9f9;
             padding: 20px;
-            margin-top: 4rem;
+            border: 1px dashed var(--primarycolor);
+        }
+
+        footer {
+            background-color: #111111;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 5%;
+            margin-top: 60px;
             font-size: 0.9rem;
-            border-top: 3px solid var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- BARRE DE NAVIGATION -->
-    <nav class="lgp-navbar">
-        <div class="lgp-logo-area">
-            <span class="lgp-logo-main">LGP</span>
-            <span class="lgp-logo-sub">Lokengama Global Partners</span>
-        </div>
-        <div class="lgp-nav-links">
-            <a href="#accueil">Accueil</a>
-            <a href="#services">Services</a>
-            <a href="#galerie">Galerie</a>
-            <a href="#bureaux">Nos Bureaux</a>
-        </div>
-    </nav>
-
-    <!-- BANNIÈRE ACCUEIL -->
-    <header class="lgp-hero" id="accueil">
-        <h1>Solutions Globales d'Investissement et Multisectorielles</h1>
-        <p>Votre partenaire stratégique pour le développement et la croissance durable en République Démocratique du Congo.</p>
+    <header>
+        <div class="brandbox">LOKENGAMA GLOBAL PARTNERS</div>
+        <nav>
+            <a href="#vision">Vision</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#commitment">Engagement</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <main class="container">
+    <section class="herosection">
+        <h1>Lokengama Global Partners (LGP)</h1>
+        <p>Société de solutions multisectorielles et d'investissement global en Afrique Centrale.</p>
+    </section>
+
+    <div class="contentcontainer">
         
-        <!-- SECTION SERVICES -->
-        <section id="services">
-            <h2 class="section-title">Nos Services</h2>
-            <div class="grid-services">
-                <div class="service-card">
-                    <h3>Investissement Stratégique</h3>
-                    <p>Accompagnement et déploiement de capitaux dans les secteurs porteurs de croissance.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Solutions Multisectorielles</h3>
-                    <p>Des conseils d'experts adaptés aux défis complexes du marché global actuel.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Partenariats Internationaux</h3>
-                    <p>Facilitation des connexions d'affaires entre acteurs locaux et investisseurs mondiaux.</p>
+        <!-- 1. Vision et Mission -->
+        <h2 class="sectiontitle" id="vision">1. Vision et Mission</h2>
+        <p><strong>Lokengama Global Partners (LGP)</strong> est une société de solutions multisectorielles et d’investissement global. Notre mission est de catalyser le développement industriel, urbain et commercial en Afrique Centrale en facilitant l’accès aux technologies de pointe, aux infrastructures de qualité et aux ressources essentielles provenant d'Asie, d'Europe et du Moyen-Orient.</p>
+
+        <!-- 2. Nos Domaines d'Expertise -->
+        <h2 class="sectiontitle" id="expertise">2. Nos Domaines d’Expertise</h2>
+        <div class="expertisegrid">
+            
+            <div class="expertisecard">
+                <img src="solar.png" alt="Énergie Solaire LGP" class="cardimage">
+                <div class="cardcontent">
+                    <h3>Énergie solaire & Hydrocarbures</h3>
+                    <p>Importation et distribution de produits pétroliers et solutions énergétiques propres adaptées à vos besoins.</p>
                 </div>
             </div>
-        </section>
 
-        <!-- SECTION GALERIE -->
-        <section id="galerie">
-            <h2 class="section-title">Galerie & Réalisations</h2>
-            <div class="grid-gallery">
-                
-                <!-- Votre Photo 1 -->
-                <div class="gallery-item">
-                    <img src="images/photo1.jpg" alt="Réalisation LGP">
-                    <div class="gallery-desc">Nos Projets Spécifiques</div>
+            <div class="expertisecard">
+                <img src="mines.png" alt="Engins de chantier et mines LGP" class="cardimage">
+                <div class="cardcontent">
+                    <h3>Vente d’Engins de Chantier & Mines</h3>
+                    <p>Fourniture de matériel lourd (de toutes marques) pour les infrastructures, vente de l'or et l’extraction minière.</p>
                 </div>
-
-                <!-- Votre Photo 2 -->
-                <div class="gallery-item">
-                    <img src="images/photo2.jpg" alt="Réalisation LGP">
-                    <div class="gallery-desc">Activités & Déploiements</div>
-                </div>
-
-                <!-- Votre Vidéo -->
-                <div class="gallery-item">
-                    <video controls>
-                        <source src="images/presentation.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture de vidéos.
-                    </video>
-                    <div class="gallery-desc">Présentation Vidéo</div>
-                </div>
-
             </div>
-        </section>
 
-        <!-- SECTION NOS BUREAUX -->
-        <section id="bureaux">
-            <h2 class="section-title">Nos Bureaux en RDC</h2>
-            <div class="grid-offices">
-                
-                <div class="office-card">
-                    <h3>📍 Kinshasa</h3>
-                    <address class="office-address">
-                        <strong>Lokengama Global Partners</strong><br>
-                        Avenue Ilingi, Numéro 06<br>
-                        Quartier Leza, Kingabwa<br>
-                        Commune de Limete Industrielle
-                    </address>
+            <div class="expertisecard">
+                <img src="water.png" alt="Traitement de l'eau LGP" class="cardimage">
+                <div class="cardcontent">
+                    <h3>Traitement de l’Eau & Agro-industrie</h3>
+                    <p>Systèmes de purification (unités CETIL) et lignes de mise en sachet automatique pour une production autonome.</p>
+                </div>
+            </div>
+
+            <div class="expertisecard">
+                <img src="logistics.png" alt="Logistique Import Export LGP" class="cardimage">
+                <div class="cardcontent">
+                    <h3>Logistique & Import/Export</h3>
